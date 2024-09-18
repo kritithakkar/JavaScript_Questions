@@ -1,0 +1,36 @@
+var p = "hello world hi bye"
+var s = "";
+for(let i =p.length-1;i>=0;i--)
+{
+    s += p[i];
+}
+console.log(s);
+
+
+function reverseString(str) {
+    // Convert the string into an array of characters
+    let charArray = str.split(""); // Since strings are immutable, we work with an array
+
+    // Initialize two pointers: one at the beginning and one at the end
+    let left = 0;
+    let right = charArray.length - 1;
+
+    // Swap characters until the two pointers meet in the middle
+    while (left < right) {
+        // Swap the characters at 'left' and 'right'
+        let temp = charArray[left];
+        charArray[left] = charArray[right];
+        charArray[right] = temp;
+
+        // Move the pointers towards the center
+        left++;
+        right--;
+    }
+
+    // Convert the array back into a string and return
+    return charArray.join("");
+}
+
+// Test the function
+const inputStr = "Hello World";
+console.log(reverseString(inputStr)); // Output: "dlroW olleH"
