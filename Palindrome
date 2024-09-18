@@ -1,0 +1,6 @@
+var s = "aba";
+var d = s.split("").reverse().join("");
+if(s == d)
+console.log("Palindrome");
+else
+console.log("No");
