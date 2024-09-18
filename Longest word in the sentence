@@ -1,0 +1,16 @@
+let p ="this is a sentence of words"
+const words = p.split(' ');
+
+    // Initialize variables to keep track of the longest word
+    let longestWord = '';
+    let maxLength = 0;
+
+    // Iterate over each word
+    for (let word of words) {
+        // Check if the current word is longer than the longest word found so far
+        if (word.length > maxLength) {
+            longestWord = word;
+            maxLength = word.length;
+    }
+}
+console.log(longestWord);
