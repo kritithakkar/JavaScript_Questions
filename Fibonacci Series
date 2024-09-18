@@ -1,0 +1,10 @@
+var num = parseInt(prompt("enter number"));
+let a =0,b=1,c=0;
+process.stdout.write(a+" "+b+" ");
+for(var i=2;i<num;i++)
+{
+    c = a+b;
+    process.stdout.write(c+" ");
+    a=b;
+    b=c;
+}
